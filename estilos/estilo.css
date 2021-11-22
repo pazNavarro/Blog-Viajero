@@ -1,0 +1,343 @@
+@font-face {
+  font-family: "cocogooseProItalic-trial.ttf";
+  src: url(../assets/fuentes/cocogooseProItalic-trial.ttf);
+}
+
+body {
+  font-family: cocogoose;
+  text-align: center;
+}
+
+.barraNav {
+  display: flex;
+  background-color: #d0deea;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+.contenedorFooter {
+  font-size: small;
+  background-color: #d0deea;
+  color: white;
+  padding: 10px 0px 10px 0px;
+}
+
+.pad10 {
+  padding: 10px;
+}
+
+/*INDEX*/
+/*desktop*/
+@media only screen and (min-width: 1024px) {
+  .gridIndex {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50% 25% 50%;
+    gap: 0px 3%;
+    grid-template-areas:
+      "img img img"
+      "miniBio miniBio miniBio"
+      "contenedor contenedor contenedor";
+  }
+
+  .paisaje {
+    grid-area: img;
+    background-image: url(../assets/img/mujerviajes.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 20cm;
+  }
+
+  .contenedores {
+    grid-area: contenedor;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .miniBio {
+    grid-area: miniBio;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #f0eeea;
+    font-size: 15px;
+    padding: 50px 0 50px 0;
+    position: static;
+  }
+
+  .avion {
+    width: 80%;
+    position: sticky;
+  }
+
+  .estadia {
+    width: 80%;
+    position: sticky;
+  }
+
+  .covid {
+    width: 90%;
+    position: sticky;
+  }
+
+  .borde {
+    background-color: #b5a3af;
+    color: whitesmoke;
+    padding: 10px;
+    margin: 34px;
+    width: 25%;
+    height: 40%;
+  }
+
+  .cabezal {
+    display: block;
+    background-color: #d0deea;
+    color: white;
+  }
+}
+
+/*mobile*/
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .gridIndex {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "img"
+      "texto"
+      "contenedores";
+  }
+
+  .paisaje {
+    grid-area: img;
+    display: flex;
+    background-image: url(../assets/img/mujerviajes.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100vw;
+    height: 20cm;
+  }
+
+  .miniBio {
+    grid-area: texto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: #f0eeea;
+    font-size: 15px;
+    padding: 20px 0 20px 0;
+    position: static;
+  }
+
+  .contenedores {
+    grid-area: contenedores;
+  }
+
+  .cabezal {
+    display: block;
+    background-color: #d0deea;
+    color: white;
+  }
+
+  .barraNav {
+    display: flex;
+    flex-direction: column;
+  }
+  .avion {
+    width: 100vw;
+  }
+  .estadia {
+    width: 100vw;
+  }
+  .covid {
+    width: 100vw;
+  }
+  /*mobile quienes somos*/
+  .gridQuienesSomos {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 20% 40%;
+    grid-template-areas:
+      "img"
+      "texto"
+      "footer";
+  }
+
+  .contenedorFooter {
+    grid-area: footer;
+    font-size: xx-small;
+  }
+  .barraNav {
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  .mujerTurista {
+    grid-area: img;
+    width: 100%;
+  }
+  .presentacion {
+    grid-area: texto;
+    font-size: xx-small;
+    background-color: #b5a3af;
+    text-align: center;
+    color: white;
+    padding: 3%;
+    margin: 10%;
+  }
+  .contenedorFooter {
+    grid-area: footer;
+  }
+
+}
+
+/*CONTACTO*/
+.contacto {
+  background-image: url(../assets/img/fondocontacto_.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  height: 15cm;
+  width: 100%;
+
+  /*Colores barranav*/
+}
+
+.inicio {
+  color: #b5a3af;
+}
+
+.contactoBarra {
+  color: #b5a3af;
+}
+
+.consejosBarra {
+  color: #b5a3af;
+}
+
+.destinos {
+  color: #b5a3af;
+}
+
+.quienesSomos {
+  color: #b5a3af;
+}
+
+/*DESTINOS*/
+
+.ciudad {
+  width: 40%;
+}
+
+.textoCiudad {
+  border-style: outset;
+  padding: 20px;
+  margin: 20px;
+  display: inline-block;
+}
+
+.ciudadEstambul {
+  width: 40%;
+}
+
+.textoEstambul {
+  border-style: outset;
+  padding: 20px;
+  margin: 20px;
+  display: inline-block;
+}
+
+.tituloDestino {
+  background-color: #b5a3af;
+  color: white;
+  padding: 20px;
+}
+
+/*CONSEJOS*/
+
+.consejos {
+  border: double #d6d6d6;
+  width: 150px;
+  height: 50px;
+  display: inline-block;
+}
+
+.contenedorConsejos {
+  padding: auto;
+  margin: auto;
+  color: #b5a3af;
+}
+
+/*QUIENES SOMOS*/
+.gridQuienesSomos {
+  display: grid;
+  grid-template-areas:
+    "img"
+    "texto"
+    "footer";
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 40% 10%;
+}
+.mujerTurista {
+  grid-area: img;
+  width: 100%;
+}
+.presentacion {
+  grid-area: texto;
+  background-color: #b5a3af;
+  color: white;
+  padding: 10%;
+  margin: 15%;
+}
+.contenedorFooter {
+  grid-area: footer;
+}
+/*CONTACTO*/
+.contacto {
+  background-image: url(../assets/img/fondocontacto_.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  height: 15cm;
+  width: 100%;
+
+  /*Colores barranav*/
+}
+
+.inicio {
+  color: #b5a3af;
+}
+
+.contactoBarra {
+  color: #b5a3af;
+}
+
+.consejosBarra {
+  color: #b5a3af;
+}
+
+.destinos {
+  color: #b5a3af;
+}
+
+.quienesSomos {
+  color: #b5a3af;
+}
